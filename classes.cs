@@ -1,4 +1,5 @@
 //Class Example
+// Classes are used to organize and store related lines of code. Classes can be set up to be public or private.
 
 public class classes: MonoBehavior:
 {
