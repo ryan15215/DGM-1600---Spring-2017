@@ -1,0 +1,45 @@
+If Statements notes
+
+if Statement -- Code used to make decision based on condition -- Main Statement (example: if the coffee is too hot, you can't dirnk it or it will burn.)
+else Statement -- code used when the condition of the if statement is not met. (example: The temperature of the coffee is just right, you can drink it.)
+else if Statment -- code used to further an if cause. (example: if the coffee is too cold, you won't want to drink it.)
+
+
+Example of drinking coffee and waiting for the right temperature from video
+        float coffeeTemperature = 85.0f;
+        float hotLimitTemperature = 70.0f;
+        float coldLimitTemperature = 40.0f;
+        
+
+        void Update ()
+        {
+            if(Input.GetKeyDown(KeyCode.Space))
+                TemperatureTest();
+            
+            coffeeTemperature -= Time.deltaTime * 5f;
+        }
+        
+        
+        void TemperatureTest ()
+        {
+            // If the coffee's temperature is greater than the hottest drinking temperature...
+            if(coffeeTemperature > hotLimitTemperature)
+            {
+                // ... do this.
+                print("Coffee is too hot.");
+            }
+            // If it isn't, but the coffee temperature is less than the coldest drinking temperature...
+            else if(coffeeTemperature < coldLimitTemperature)
+            {
+                // ... do this.
+                print("Coffee is too cold.");
+            }
+            // If it is neither of those then...
+            else
+            {
+                // ... do this.
+                print("Coffee is just right.");
+            }
+        }
+    }
+
