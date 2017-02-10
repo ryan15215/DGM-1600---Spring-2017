@@ -1,0 +1,25 @@
+Variables
+
+2 Types: Value and Reference
+
+    Value -- declares a specific value to a variable. Stores the information.
+        -int -- Whole nubers, pos or neg. (example: 2)
+        -float -- Decimal with 1 number after point. (example: 2.5)
+        -double -- More accurate version of float , decimal with 2 numbers after point. (example: 2.46)
+        -bool -- 2 options, true or false. (example: on or off)
+        -char -- Single letter. (example: A)
+        -string -- More than one letter, a name or word. (axample: Andrew)
+        -Structs: Two types: Vector3 and Quaternion
+            -Vector3 -- Array of 3 Float values that coordinate to 3D space (X,Y,Z) (example: 2,4,6)
+            -Quaternion -- Array of 4 Float Values that coordinate to 3d space (n,x,y,z) (example 40,2,4,6)
+
+    Reference -- manipulates a referenced value. references the information, doesn't store it.
+        -Classes
+            -Transform -- translation, rotation, and scale 
+                (example: moving an object to a new location: 
+                    Transform tran = transform;
+                    tran.position = new Vector3(0, 2, 0)
+            -GameObject1 -- 
+
+    
+
