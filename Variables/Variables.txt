@@ -1,6 +1,6 @@
-Variables
+Variables- A variable is nothing but the name given to a storage area that our programs can manipulate
 
-2 Types: Value and Reference
+2 Data Types of Variables: Value and Reference
 
     Value -- declares a specific value to a variable. Stores the information.
         -int -- Whole nubers, pos or neg. (example: 2)
@@ -13,7 +13,7 @@ Variables
             -Vector3 -- Array of 3 Float values that coordinate to 3D space (X,Y,Z) (example: 2,4,6)
             -Quaternion -- Array of 4 Float Values that coordinate to 3d space (n,x,y,z) (example 40,2,4,6)
 
-    Reference -- manipulates a referenced value. references the information, doesn't store it.
+    Reference -- manipulates a referenced value to get the desired result. references the information, doesn't store it.
         -Classes
             -Transform -- translation, rotation, and scale 
                 (example: moving an object to a new location: 
