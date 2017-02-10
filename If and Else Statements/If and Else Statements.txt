@@ -43,3 +43,40 @@ Example of drinking coffee and waiting for the right temperature from video
         }
     }
 
+If Statement with Else(if) Clause examples
+
+    if (number > 5) 
+        Console.WriteLine ("The number should be 5 or less");
+    else if (number < 0) 
+        Console.WriteLine ("The number should be 0 or greater");
+
+    if(5 < 2 * 3) 
+        Console.WriteLine ("True");
+    else 
+        Console.WriteLine ("False");
+
+    if (a < 15) 
+        Console.WriteLine ("True, A is less than 15");
+    else 
+        Console.WriteLine ("False, A is not less than 15");
+
+    if (age >= 35)
+        Console.WriteLine ("You can be President!");
+    else if (age >= 21)
+        Console.WriteLine ("You can drink!");
+    else if (age >= 18)
+        Console.WriteLine ("You can vote!");
+    else if (age >= 16)
+        Console.WriteLine ("You can drive!");
+    else
+        Console.WriteLine ("You can wait!");
+
+    if (2+2 == 5)
+        Console.WriteLine ("Does not compute");
+    else
+        Console.WriteLine ("False");
+
+    if (2+2 == 5)
+        Console.WriteLine ("Does not compute");
+    else if (2+2 == 4)
+        Console.WriteLine ("Computes");
