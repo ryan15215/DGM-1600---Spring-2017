@@ -1,0 +1,35 @@
+Switch Statement example -- reaction to traffic light color.
+
+    string light = "green";
+
+    switch (light){
+        case "red":
+            print("The light is red--STOP for crying out loud!!!");
+        break;
+        case "yellow":
+            print("thelight is yellow--Slow Down!!");
+        break;
+        case "green":
+            print("the light is green--Go Dog Go!");
+        break;
+        default:
+            print("that's not a valid color.");
+        break;
+    }
+
+
+For Loop example-- 99 bottles of beer on the wall
+
+    public int bottles = 0;
+
+    for(int i=99;i>bottles;i--){
+        print(i+"bottles of beer on the wall");
+    }
+
+While Loop example -- loading ammo
+
+    while(ammo < 12){
+        ammo++;
+        print ("Loading round" + ammo);
+    }
+			

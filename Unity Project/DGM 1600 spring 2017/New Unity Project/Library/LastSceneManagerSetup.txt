@@ -1,0 +1,5 @@
+sceneSetups:
+- path: C:/Users/10501911/Documents/GIT/DGM-1600---Spring-2017/Unity Project/DGM 1600
+    spring 2017/Assets/Practice.unity
+  isLoaded: 1
+  isActive: 1
