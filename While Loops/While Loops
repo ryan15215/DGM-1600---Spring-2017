@@ -1,0 +1,140 @@
+Loops -- Statements that can efficiently repeat a statment. often refered to as iterating.
+4 types of loops:
+    For loop - good for repeating a certain number of time.
+    While loop - good for repeating while a conditional remains true. tests for condition at beginning of the body.
+    Do-While loop - good for repeating while a conditional remains true. tests for condition at end of the body. -- going to run at least once.
+    For Each loop - good for iterating through collections like arrays. loops through a collection item by item until it reaches the end of the collection.
+
+Example of while loop from video - the program will decrease by 1 cup and say "I've washed a cup" as long as there are cups in the sink.
+
+    using UnityEngine;
+    using System.Collections;
+
+    public class WhileLoop : MonoBehaviour
+    {
+        int cupsInTheSink = 4;
+        
+        
+        void Start ()
+        {
+            while(cupsInTheSink > 0)
+            {
+                Debug.Log ("I've washed a cup!");
+                cupsInTheSink--;
+            }
+        }
+    }
+
+Example of do-while loop - Even though the condition is set to false, "Hello World" will still print, because do-while loops always run at least once, because the check for the condition at the end of the body.
+        
+        using UnityEngine;
+        using System.Collections;
+
+        public class DoWhileLoop : MonoBehaviour 
+        {
+            void Start()
+            {
+                bool shouldContinue = false;
+                
+                do
+                {
+                    print ("Hello World");
+                    
+                }while(shouldContinue == true);
+            }
+        }
+
+Example of for loop from video - loop will run while i is less than numEnemies, and will print "creating enemy number:" + i
+   
+    public class ForLoop : MonoBehaviour
+    {
+        int numEnemies = 3;
+        
+        
+        void Start ()
+        {
+            for(int i = 0; i < numEnemies; i++)
+            {
+                Debug.Log("Creating enemy number: " + i);
+            }
+        }
+    }
+
+Example of for-each loop from video:
+
+    using UnityEngine;
+    using System.Collections;
+
+    public class ForeachLoop : MonoBehaviour 
+    {   
+        void Start () 
+        {
+            string[] strings = new string[3];
+            
+            strings[0] = "First string";
+            strings[1] = "Second string";
+            strings[2] = "Third string";
+            
+            foreach(string item in strings)
+            {
+                print (item);
+            }
+        }
+    }
+
+For Loop example-- 99 bottles of beer on the wall
+
+    public int bottles = 0;
+
+    for(int i=99;i>bottles;i--){
+        print(i+"bottles of beer on the wall");
+    }
+
+While Loop examples assignment:
+
+    while(ammo < 12){
+        ammo++;
+        print ("Loading round" + ammo);
+    }
+
+
+
+    int i = 0
+    while (i< 3){
+        Console.Write (i++);
+    }
+
+
+
+    while(money <$1000){
+        money++;
+        print "You've earned" + money;
+    }
+
+
+    int num = 1;
+    while(num < 6){
+        Console.WriteLine(num);
+        num++;
+    }
+
+
+    int x = 42;
+    int num = 0;
+    while(num < 3) {
+        Console.WriteLine(x);
+        num++;
+    }
+
+
+    int num = 0;
+    while(num<100){
+        Console.WriteLine(num);
+        num+=2;
+    }
+
+
+    int num = 0;
+    while(++num < 6){
+        Console.WriteLine(num);
+    } 

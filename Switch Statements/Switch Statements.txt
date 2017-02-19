@@ -1,3 +1,44 @@
+Switch Statements-- provides a more streamlined and elegant way to test and compare a variable for equality against a list of values
+
+Case - each value is called a case. The switch checks each case until a case is matched.
+cases are labeled "case" follwed by the variable and a colon, and then the statement that will be executed if the case is matched.
+
+Default - an optional case that can be added to the end of the switch statement that will be executed if none of the previous cases are matched.
+
+Break - the break statement is included after each of the cases, to terminate the switch statement if a match is found.
+
+Example from the video - Based on a characters intelligence level, the switch statement will determine which greeting is used.
+
+    public int intelligence = 5;
+        
+        
+        void Greet()
+        {
+            switch (intelligence)
+            {
+            case 5:
+                print ("Why hello there good sir! Let me teach you about Trigonometry!");
+                break;
+            case 4:
+                print ("Hello and good day!");
+                break;
+            case 3:
+                print ("Whadya want?");
+                break;
+            case 2:
+                print ("Grog SMASH!");
+                break;
+            case 1:
+                print ("Ulg, glib, Pblblblblb");
+                break;
+            default:
+                print ("Incorrect intelligence level.");
+                break;
+            }
+        }
+    }
+
+
 Switch Statement example -- reaction to traffic light color.
 
     string light = "green";
@@ -17,19 +58,80 @@ Switch Statement example -- reaction to traffic light color.
         break;
     }
 
+Switch Statement examples: 
 
-For Loop example-- 99 bottles of beer on the wall
+    int cardNumber = 13
 
-    public int bottles = 0;
-
-    for(int i=99;i>bottles;i--){
-        print(i+"bottles of beer on the wall");
+    switch(cardNumber){
+        case 13: 
+            Console.Writeline ("King");
+        break;
+        case 12:
+            Console.Writeline ("Queen");
+        break;
+        case 11:
+            Console.Writeline ("Jack");
+        break;
+        default:
+            Console.Writeline (cardNumber);
+        break;
     }
 
-While Loop example -- loading ammo
-
-    while(ammo < 12){
-        ammo++;
-        print ("Loading round" + ammo);
+    switch (cardNumber){
+        case 13:
+        case 12:
+        case 11:
+            print("Face card");
+        break;
+        default:
+            print("Plain Card");
+        break;
     }
-			
+
+
+
+    switch(x){
+        case 10:
+            print("TEN");
+        break;
+        case 20:
+            print("TWENTY");
+        break;
+        default:
+            print("No match");
+        break;
+
+    
+
+    int x = 33;
+        switch(x){
+            case 8:
+                Console.Writeline("Value is 8");
+            break;
+            case 18:
+                Console.Writeline("Value is 18");
+            break;
+            case 33:
+                Console.Writeline("Value is 33");
+            break;
+        }
+    
+
+
+    string name = "Ryan"
+    switch(name){
+        case "Ryan":
+            print("Ryan has brown hair");
+        break;
+        case "Maddie":
+            print("Maddie has red hair");
+        break;
+        case "Josh":
+            print("Josh has blonde hair");
+        break;
+        case "Adam":
+            print("Adam has no hair");
+        break;
+    }
+
+
