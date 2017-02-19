@@ -1,3 +1,5 @@
+
+
 Switch Statements-- provides a more streamlined and elegant way to test and compare a variable for equality against a list of values
 
 Case - each value is called a case. The switch checks each case until a case is matched.
