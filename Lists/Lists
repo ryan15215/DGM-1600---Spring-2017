@@ -1,0 +1,106 @@
+Lists
+
+Lists and dictionaries work similary to arrays. 
+
+Lists are like dynamically sized arrays - you don't need to know how many elements it holds ahead of time.
+
+When creating a list you must include the System.Collections.Generic namespace at the top of the script.
+
+To create the list you start with the class "List" followed by the name in angle brackets, and then call on the constructor.
+    
+    example: List<Pet> pets = new List<Pet>();
+
+To allocate to the list, you use the add function, which adds a new element to the end of the list.
+
+    example:
+        pets.Add( new Pet("Fido"));
+        pets.Add( new Pet("Fluffy"));
+        pets.Add( new Pet("Rufus"));
+
+Elements can be access similarly to arrays -- by callin on the elements index number.
+
+    example: pets[0]; -- accesses "Fido"
+
+
+Example from video: -- "bad guy" adds 3 new bad guys to the list, "harvey", "magneto", and "pip."
+
+    using UnityEngine;
+    using System.Collections;
+    using System.Collections.Generic;
+
+    public class SomeClass : MonoBehaviour
+    {
+        void Start () 
+        {
+            
+            List<BadGuy> badguys = new List<BadGuy>();
+            
+            badguys.Add( new BadGuy("Harvey", 50));
+            badguys.Add( new BadGuy("Magneto", 100));
+            badguys.Add( new BadGuy("Pip", 5));
+        }
+
+
+RemoveAt function -- removes an element from list and rearranges all following elements down an index number.
+
+Insert function -- inserts new element into list and rearranges all following elements up an index number.
+
+Sort function -- one of the strongest parts of lists. Must be used in the System namespace, and the class Icomparable. A CompareTo bust be created
+to compare the elements to. If the the element is greater than the elemet it is being compared to, the funtion returns a positive. If the the element 
+is less than the elemet it is being compared to, the funtion returns a negitive. If the the element is equal to the elemet it is being compared to, 
+the funtion returns a zero.
+
+
+Example from video: -- Compares power levels of bad guys, returning the difference in power.
+
+    using UnityEngine;
+    using System.Collections;
+    using System;
+
+    public class BadGuy : IComparable<BadGuy>
+    {
+        public string name;
+        public int power;
+        
+        public BadGuy(string newName, int newPower)
+        {
+            name = newName;
+            power = newPower;
+        }
+        
+        public int CompareTo(BadGuy other)
+        {
+            if(other == null)
+            {
+                return 1;
+            }
+        }
+    }
+
+
+example from video: -- This sorts the list, printing the name and powerleve of each bad guy, the clears the list.
+
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public class SomeClass : MonoBehaviour
+{
+    void Start () 
+    {
+        List<BadGuy> badguys = new List<BadGuy>();
+        
+        badguys.Add( new BadGuy("Harvey", 50));
+        badguys.Add( new BadGuy("Magneto", 100));
+        badguys.Add( new BadGuy("Pip", 5));
+        
+        badguys.Sort();
+        
+        foreach(BadGuy guy in badguys)
+        {
+            print (guy.name + " " + guy.power);
+        }
+        
+        badguys.Clear();
+    }
+}
