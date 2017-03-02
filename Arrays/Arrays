@@ -1,0 +1,107 @@
+Arrays
+
+Arrays are a way to store a collection of the same type of data.
+
+Declare an array the same way to would another type of data followed by open and closed square brackets, then the name of the array.
+
+To specify the ammount of elements store in the array, the keyword 'new' is used followed by the type of array, and then the number in square brackets.
+    
+    example: int[]myArray = new int[5]; -- this array titled, "myArray" has 5 elements stored in it.
+
+To access and initialize elements from the array we type the name of the array, followed by the index number of the element we want to access in square brackets, and then assigning its value.
+   
+   example:    
+    
+        int[]myArray = new int[5];
+
+        void Start()
+        {
+            myArray[0] = 1;
+            myArray[1] = 2;
+            myArray[2] = 3;
+            myArray[3] = 4;
+            myArray[4] = 5;
+        }
+
+The index numbers assigned the each element in an array start from the number zero, so the first element listed in an array will have the index number [0] assigned to it.
+
+We can also declare and initialize the array at the same time, by using braces. declare the type, followed by open and closed sqaure brackets, then the name of the array.
+assign the values in the array inside curly brackets. 
+
+    example:
+
+        int[] myArray = {1, 2, 3, 4, 5};
+
+Arrays work with loops, 
+
+Example from video: - amount of players determines which characters will be used in game. The for loop will type out the name of each character in relation to the player's number.
+
+    using UnityEngine;
+    using System.Collections;
+
+    public class Arrays : MonoBehaviour
+    {
+        public GameObject[] players;
+
+        void Start ()
+        {
+            players = GameObject.FindGameObjectsWithTag("Player");
+            
+            for(int i = 0; i < players.Length; i++)
+            {
+                Debug.Log("Player Number "+i+" is named "+players[i].name);
+            }
+        }
+    }
+
+Arrays examples assignment:
+
+
+    char[] vowels = new char[5];
+                
+    void Start()
+    {
+        vowels[0] = 'a';
+        vowels[1] = 'e';
+        vowels[2] = 'i';
+        vowels[3] = 'o';
+        vowels[4] = 'u';
+    }
+
+    Console.Writeline (vowels[1]);
+
+Could also be written:
+
+    char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+
+    Console.Writeline (vowels[1]);
+
+
+    int[] age = new int [10];
+
+    void Start()
+    {
+        age[0] = 10;
+        age[1] = 11;
+        age[2] = 12;
+        age[3] = 13;
+        age[4] = 14;
+        age[5] = 15;
+        age[6] = 16;
+        age[7] = 17;
+        age[8] = 18;
+        age[9] = 19;
+    }
+
+    Console.Writeline ("You are age" + age[4]);
+
+Could also be written:
+
+    int[] age = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
+
+    Console.Writeline ("You are age" + age[4]);
+
+
+    
+
+    
