@@ -138,3 +138,58 @@ While Loop examples assignment:
     while(++num < 6){
         Console.WriteLine(num);
     } 
+
+
+For Loop examples assignment:
+
+
+    for (int x = 10; x < 15; x++){
+        Console.WriteLine("Value of x: {0}", x);
+    }
+
+
+    for (int x = 5; x < 10; x++ ){
+        Console.WriteLine(x);
+    }
+
+
+    for (int cups =7; cups < 0; cups--){
+        print "You've washed 1 cup, there are" +cups print "left in the sink";
+    }
+
+
+    for (int x = 0; x < 10; x+=3)
+        {
+        Console.WriteLine(x);
+    }
+
+
+    for (int x = 10; x > 0; x-=2)
+        {
+        Console.WriteLine(x);
+    }
+
+
+    for (int x = 50; x > 25; x--){
+        print "The value of X is" (x);
+    }
+
+
+    for (int x = 0; x < 100; x+= 2) {
+        Console.WriteLine(x);
+    }
+
+
+Foreach Loop example assignment:
+
+    foreach (char c in "beer"){
+        Console.WriteLine (c + " ");
+    }
+
+
+    string[] pets = { "dog", "cat", "bird" };
+
+        foreach (string value in pets){
+            Console.WriteLine(value);
+        }
+
