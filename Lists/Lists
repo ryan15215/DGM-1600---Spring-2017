@@ -2,7 +2,8 @@ Lists
 
 Lists and dictionaries work similary to arrays. 
 
-Lists are like dynamically sized arrays - you don't need to know how many elements it holds ahead of time.
+Lists are like dynamically sized arrays - you don't need to know how many elements it holds ahead of time. elements in arrays are all of one type,
+while elements in lists can be a variety and combination of types.
 
 When creating a list you must include the System.Collections.Generic namespace at the top of the script.
 
@@ -22,7 +23,7 @@ Elements can be access similarly to arrays -- by callin on the elements index nu
     example: pets[0]; -- accesses "Fido"
 
 
-Example from video: -- "bad guy" adds 3 new bad guys to the list, "harvey", "magneto", and "pip."
+Example from video: -- "bad guy" adds 3 new bad guys to the list, "harvey", "magneto", and "pip," along with their respective power levels.
 
     using UnityEngine;
     using System.Collections;
@@ -45,9 +46,9 @@ RemoveAt function -- removes an element from list and rearranges all following e
 
 Insert function -- inserts new element into list and rearranges all following elements up an index number.
 
-Sort function -- one of the strongest parts of lists. Must be used in the System namespace, and the class Icomparable. A CompareTo bust be created
-to compare the elements to. If the the element is greater than the elemet it is being compared to, the funtion returns a positive. If the the element 
-is less than the elemet it is being compared to, the funtion returns a negitive. If the the element is equal to the elemet it is being compared to, 
+Sort function -- one of the strongest parts of lists. Uses Icomparable interface. Must be used in the System namespace, and the class Icomparable. A CompareTo 
+function must be created to compare the elements to. If the the element is greater than the elemet it is being compared to, the funtion returns a positive.
+If the the element is less than the elemet it is being compared to, the funtion returns a negitive. If the the element is equal to the elemet it is being compared to, 
 the funtion returns a zero.
 
 

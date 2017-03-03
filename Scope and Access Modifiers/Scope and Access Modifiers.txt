@@ -1,0 +1,137 @@
+Scope and Access Modifiers
+
+Scope is the area in which a variable can be used, typically divided by brackets. 
+
+    Example:
+
+    public class ScopeAndAccessModifiers : MonoBehaviour
+        {
+            public int alpha = 5;
+            
+            
+            private int beta = 0;
+            private int gamma = 5;
+            
+            
+            private AnotherClass myOtherClass;
+            
+            
+            void Start ()
+            {
+                alpha = 29;
+                
+                myOtherClass = new AnotherClass();
+                myOtherClass.FruitMachine(alpha, myOtherClass.apples);
+            }
+            
+            
+            void Example (int pens, int crayons)
+            {
+                int answer;
+                answer = pens * crayons * alpha;
+                Debug.Log(answer);
+            }
+            
+
+        in the example above, the 'fruitmachine' is in the scope of the
+        ScopeAndAccessModifiers class and the start function. The 'crayons and pens' are in the ScopeAndAccessModifiers class scope and the example function's scope.
+        the example function's scope only include the 'crayons and pens' and not 'fruitmachine'
+
+
+Access Modifiers defines what/who can access and modify variables in the script. 
+
+    Example:
+
+        public class ScopeAndAccessModifiers : MonoBehaviour
+            {
+                public int alpha = 5;
+                
+                
+                private int beta = 0;
+                private int gamma = 5;
+            }
+
+        in the example, alpha int can be modified in game, while the beta and gamma ints can only be modified through the script.
+
+general rule: if other scripts need to access a script it should be labeled as public, scripts not 
+needing to be seen or accessed should be labeled private.
+
+If a modifier class type is not defined, it will be set as private by default. 
+
+Variables defined in one class cannot be accessed in another class, unless set to global (out of the defined classes)
+
+public variables can me modified during runtime through the interface, private can only be modified through the script.
+
+Examples from video:
+
+Example 1:
+
+    using UnityEngine;
+    using System.Collections;
+
+    public class ScopeAndAccessModifiers : MonoBehaviour
+    {
+        public int alpha = 5;
+        
+        
+        private int beta = 0;
+        private int gamma = 5;
+        
+        
+        private AnotherClass myOtherClass;
+        
+        
+        void Start ()
+        {
+            alpha = 29;
+            
+            myOtherClass = new AnotherClass();
+            myOtherClass.FruitMachine(alpha, myOtherClass.apples);
+        }
+        
+        
+        void Example (int pens, int crayons)
+        {
+            int answer;
+            answer = pens * crayons * alpha;
+            Debug.Log(answer);
+        }
+        
+
+Example 2:
+
+
+    using UnityEngine;
+    using System.Collections;
+
+    public class AnotherClass
+    {
+        public int apples;
+        public int bananas;
+        
+        
+        private int stapler;
+        private int sellotape;
+        
+        
+        public void FruitMachine (int a, int b)
+        {
+            int answer;
+            answer = a + b;
+            Debug.Log("Fruit total: " + answer);
+        }
+        
+        
+        private void OfficeSort (int a, int b)
+        {
+            int answer;
+            answer = a + b;
+            Debug.Log("Office Supplies total: " + answer);
+        }
+    }
+            
+            void Update ()
+            {
+                Debug.Log("Alpha is set to: " + alpha);
+            }
+        }
